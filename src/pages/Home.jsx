@@ -1,15 +1,27 @@
 import { useState } from 'react';
 export function Home() {
-  const [state, setState] = useState('');
+  const [state, setState] = useState("");
+  const [error, setError] = useState(false);
+  const [list, setList] = useState([]);
   function MyButton() {
   const [phone, setPhone] = useState();
   function handleClick() {
-    alert('Please enter a valid 10-digits phone number');
+    
   }
+  function handleClick(){
+    if (state.length === 10 && /^\d+$/.test(state)) {
+      setList([list, state]);
+      setState("");
+      setError(false);
+    } else {
+      setError(true);
+    }
+  }
+  
   return (
     <button onCLick={handleClick}>Add</button>
   )
-}
+  }
   return (
     <div>
       <div>
@@ -19,20 +31,28 @@ export function Home() {
       <div>
         <h2>Sign up</h2>
         <p>Sign up for notifications</p>
-        <MyButton />
+        
         <input
-          id={'my-input'}
-          type={'number'}
+          type= "number"
           value={state}
           placeholder={'Enter your 10-digit Number'}
-          onChange={event => {
+          onChange={event => (
             setState(event.target.value)
-        }}
-        />
+          )}
+          />
+          <MyButton />   
+          </div>
+            <div>
+              <h2>Users who have signed up!</h2>
+              <ul>
+              {list.map((list, index) => (
+              <li key={index}>{list}</li>
+              
+       ))}    
+       </ul>      
+        </div>
+   
 
+</div>
+    );}
 
-      
-</div>
-</div>
-    )
-    }
