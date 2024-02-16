@@ -1,5 +1,6 @@
 import { useState } from 'react';
 export function Home() {
+  const [state, setState] = useState('');
   function MyButton() {
   const [phone, setPhone] = useState();
   function handleClick() {
@@ -19,6 +20,17 @@ export function Home() {
         <h2>Sign up</h2>
         <p>Sign up for notifications</p>
         <MyButton />
+        <input
+          id={'my-input'}
+          type={'number'}
+          value={state}
+          placeholder={'Enter your 10-digit Number'}
+          onChange={event => {
+            setState(event.target.value)
+        }}
+        />
+
+
       
 </div>
 </div>
