@@ -1,13 +1,14 @@
 import { useState } from 'react';
 export function Home() {
-  function MyButton({ onClick }) {
-    return (
-      <button onCLick={handleClick}>Add</button>
-    );
-  }
+  function MyButton() {
+  const [phone, setPhone] = useState();
   function handleClick() {
     alert('Please enter a valid 10-digits phone number');
   }
+  return (
+    <button onCLick={handleClick}>Add</button>
+  )
+}
   return (
     <div>
       <div>
@@ -18,6 +19,7 @@ export function Home() {
         <h2>Sign up</h2>
         <p>Sign up for notifications</p>
         <MyButton />
+      
 </div>
 </div>
     )
