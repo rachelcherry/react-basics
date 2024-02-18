@@ -18,6 +18,11 @@ export function About() {
       <li>Education: Boston University, BA in Computer Science, intended 2025</li>
       <li>Profession: Student and TA</li>
       </div>
+ <div>
+ <footer>
+        <p>&copy; 2024 Spark! BookPals. All rights reserved </p>
+      </footer>
+ </div>
     </div>
   )
 }
