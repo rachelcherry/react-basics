@@ -11,12 +11,12 @@ export function About() {
       <img
         className="avatar"
         src={'me.png'} 
-        style={{
-          width: 90,
-          height: 90
-        }}
+        style={{width: 150, height: 150, borderRadius: 150 / 2}} 
       />
-      <p></p>
+
+      <li>Bio: My name is Rachel Cherry, and I am a Junior at Boston University studying Computer Science. </li>
+      <li>Education: Boston University, BA in Computer Science, intended 2025</li>
+      <li>Profession: Student and TA</li>
       </div>
     </div>
   )
