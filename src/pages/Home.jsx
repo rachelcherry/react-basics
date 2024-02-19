@@ -10,6 +10,8 @@ export function Home() {
     if(state.length == 10 && /^\d+$/.test(state)) {
       setList([...list, state]);
       setState("");
+      alert('Thank you! We will notify you at ' + state + ' when Spark! BookPals is ready for WhatsApp')
+     // alert('Thank you! We will notify' + {state} + 'when Spark! BookPals is ready for WhatsApp')
     } else {
       alert("You didn't enter a valid 10 digit number. Please try again if you wish to be notified.");
     }
@@ -19,11 +21,11 @@ export function Home() {
     <button onClick={handleClick}>Add</button>
   )
   }
+  
   return (
     <div>
-      <div>
-      <Link to="/about">About Page</Link>
-      </div>
+      <Nav ></Nav>
+      <br></br>
       <div>
         <h1> Welcome to Spark! BookPals</h1>
         <p>Spark! BookPals is a revolutionary platform for Boston University's community. BU students and affiliates can connect with each other to share book recommendations, start in-depth discussions, and more! Our unique features allow users to filter books based on genres and complexity, among other things. Stay up-to-date through SMS, Signal, and whatsapp notifications wherever a book you may be interested in is disussed</p>
@@ -47,8 +49,9 @@ export function Home() {
           }}
           />
           <MyButton />
-          <p>Please enter a valid 10-digit</p>
-   
+          <div class='statement'>
+          <p>Please enter a valid 10-digit phone number</p>
+          </div>
           </div>
             <div>
               <h2>Users who have signed up!</h2>
@@ -61,12 +64,12 @@ export function Home() {
              
         </div>
         <div>
-        <footer>
-        <p>&copy; 2024 Spark! BookPals. All rights reserved </p>
-      </footer>
+ 
  </div>
-   
-
+  <br></br>
+ <footer>
+        <span>&copy; 2024 Spark! BookPals. All rights reserved </span>
+      </footer>
 </div>
     );}
 
