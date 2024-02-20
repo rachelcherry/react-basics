@@ -1,4 +1,5 @@
 import "../index.css";
+import React from 'react';
 import  NavBar  from '/Users/rachelcherry/hw3-react-rachelcherry/src/components/NavBar.jsx';
 import Footer from '/Users/rachelcherry/hw3-react-rachelcherry/src/components/Footer.jsx';
 export function About() {

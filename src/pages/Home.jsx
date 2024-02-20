@@ -48,7 +48,13 @@ export function Home() {
       }
     
       return (
-        <button className="whats-button" onClick={handleWAClick}>Join for WhatsApp</button>
+        <div>
+        <img
+        className="whats-img"
+        src={'whatsapp.svg'} 
+      />
+      <button className="whats-button" onClick={handleWAClick}>Join for WhatsApp</button>
+      </div>
       )
     }
   return (
@@ -96,13 +102,7 @@ export function Home() {
 
 <div className="cta">
     <h1>Want to try it out?</h1>
-    <img
-        className="whats-img"
-        src={'whatsapp.svg'} 
-      
-      />
       <WhatsApp />
-
 </div>
         <div>
         <Footer />

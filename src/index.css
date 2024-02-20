@@ -25,11 +25,30 @@
 
   footer {
     padding: 1em;
-    background-color: grey; 
+    background-color: #333; 
     color: white;
     text-align: center;
 }
 
+ul {
+    padding: 0; 
+    margin: 0;
+    font-size: 25px; /* sets the font size of the title of the ordered list to be 25px*/
+    font-weight: bold; /* bolds the title of the list*/
+  }
+  ul li {
+    padding: 0; 
+    margin: 1em; /* indent the text in the list */
+    font-size: 18px; /* set the font size of the elements to be 18px*/
+    font-weight: normal; /* ensure the emails are not bolded*/
+
+  }
+.navSpan {
+    display: flex; /* this is to help with the alignment of the navigation bar*/
+    justify-content: space-between; /* creates a space between the content*/
+    padding: 1em; /* padding for the text so that it is aligned correctly*/
+    color: white; /* color the text white */
+}
 
 nav {
     display: flex; /* this is to help with the alignment of the navigation bar*/
@@ -49,7 +68,41 @@ nav a {
 
 }
 
+.cta {
+    padding: 1em;
+    background-color: red;
+    color: white;
+    text-align: center;
+    margin: 2em 0;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+.whats-button{
+background-color: 333;
+color: black;
+}
+
+.cta img{
+    background-color: #333;
+}
+
+.cta button {
+    color: white; /* color the text white in the buttons */
+    text-decoration: none;
+    margin-left: 0.5em; /* push the text to the left 1em*/
+    padding: 1em;
+    margin-right: 1em;
+    background-color: #333;
+
+
+}
+.whats-img {
+   width: 20px;
+   height:20px; 
+}
+
 .author-img {
+    border: 1px solid red;
     width: 150px;
     height: 150px;
     border-radius: 50%; /* make the image circular */
