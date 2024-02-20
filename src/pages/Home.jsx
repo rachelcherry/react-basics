@@ -1,12 +1,31 @@
 import { useState } from 'react';
 //import { Button } from '/Users/rachelcherry/hw3-react-rachelcherry/src/components/Button.jsx';
 import  NavBar  from '/Users/rachelcherry/hw3-react-rachelcherry/src/components/NavBar.jsx';
-import { Button } from "/Users/rachelcherry/hw3-react-rachelcherry/src/components/Button.jsx";
+import Footer from '/Users/rachelcherry/hw3-react-rachelcherry/src/components/Footer.jsx';
+//import {Footer} from "/Users/rachelcherry/hw3-react-rachelcherry/src/components/Footer.jsx";
 //import { Link } from 'react-router-dom';
 export function Home() {
   const [state, setState] = useState("");
   const [error, setError] = useState(false);
   const [list, setList] = useState([]);
+  function MyButton() {
+    const [list, setList] = useState([]);
+    function handleClick(){
+      <h3> {error} </h3>
+      if(state.length == 10 && /^\d+$/.test(state)) {
+        setList([...list, state]);
+        setState("");
+        alert('Thank you! We will notify you at ' + state + ' when Spark! BookPals is ready for WhatsApp')
+       // alert('Thank you! We will notify' + {state} + 'when Spark! BookPals is ready for WhatsApp')
+      } else {
+        alert("You didn't enter a valid 10 digit number. Please try again if you wish to be notified.");
+      }
+    }
+
+    return (
+      <button onClick={handleClick}>Add</button>
+    )
+    }
   return (
     <div>
 <NavBar />
@@ -17,7 +36,8 @@ export function Home() {
       </div>
       <div>
         <h2>Sign up</h2>
-        <p>Sign up for notifications</p>
+        <p>Sign up for notifications</p> 
+        
         
         <input
           type= "number"
@@ -33,8 +53,9 @@ export function Home() {
             }
           }}
           />
+          <MyButton />
+         
           <div class='statement'>
-            <Button />
           <p>Please enter a valid 10-digit phone number</p>
           </div>
           </div>
@@ -46,15 +67,12 @@ export function Home() {
               
        ))}    
        </ul>
-             
         </div>
         <div>
- 
+        <Footer />
  </div>
   <br></br>
- <footer>
-        <span>&copy; 2024 Spark! BookPals. All rights reserved </span>
-      </footer>
+
 </div>
     );}
 
