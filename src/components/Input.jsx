@@ -14,6 +14,8 @@ const Input = ({ userInput, setUserInput}) => {
                     setUserInput(event.target.value)
                    
                 }}
+
+        
             />
   
         </>

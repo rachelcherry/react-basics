@@ -9,19 +9,21 @@ import WhatsApp from '/Users/rachelcherry/hw3-react-rachelcherry/src/components/
 export function Home() {
   const [userInput, setUserInput] = useState("");
   const [numbersList, setNumbersList] = useState([]);
+  const [error, setError] = useState(false);
   
   function handleAddNumber() {
     if (userInput.length === 10 && /^\d+$/.test(userInput)) {
-      // James says it's okay to do this rather than the (prevValue, props) construction
       setNumbersList([...numbersList, userInput])
       setUserInput("")
+      setError(false)
+    } else {
+      setError(true)
     }
-    else {
-      console.log("User didn't input a valid number.")
-    }
-
   }
+ 
+
   return (
+   
     <div>
       <NavBar />
       <br></br>
@@ -31,9 +33,11 @@ export function Home() {
       </div>
       <br></br>
       <div>
-        <Input userInput={userInput} setUserInput={setUserInput} />
+        <Input userInput={userInput} setUserInput={setUserInput} error={error} />
         <button onClick={handleAddNumber}>Add </button>
-    
+        <div className ="error">
+    {error && <p>Please enter a valid 10 digit phone number.</p>}
+  </div>
         <div>
         <br></br>
           <h2>Users who have signed up!</h2>
