@@ -8,8 +8,8 @@ const NavBar = () => {
           <span className="navSpan">Spark! BookPals</span>
           <div className="links">
             <ul>
-            <li><Link to="/">Home</Link></li>
-          <li><Link to="/about"> About</Link> </li>
+            <li><Link to="/">Home</Link></li> {/* links to the home page in the nav bar */}
+          <li><Link to="/about"> About</Link> </li>{/* links to the about page in the nav bar */}
             </ul>
           </div>         
         </nav>

@@ -6,16 +6,18 @@ export function About() {
 
   return (
     <div>
-<NavBar />
+<NavBar /> {/* calls the NavBar component */ }
       <br></br>
     <h1>About Spark! Bookpals!</h1>
     <p>Spark! BookPals was conceived with a simple idea in mind - to make it easy for Boston University community members to find new books to read. We recognized the potential of connecting those who have read a lot with those are just dipping their feet into reading.</p>
     <div>
+      {/* creates author image */ }
       <h1>{"About the Author"}</h1>
-      <img
+      <img 
         className="author-img"
         src={'me.png'} 
       />
+      {/* creates unordered list with author information */ }
       <ul className="author-info">
       <li>Bio: My name is Rachel Cherry, and I am a Junior at Boston University studying Computer Science. </li>
       <li>Education: Boston University, BA in Computer Science, intended 2025</li>
@@ -25,7 +27,7 @@ export function About() {
 
  <div>
   <br></br>
-<Footer />
+<Footer /> {/* calls the Footer component */ }
  </div>
     </div>
   )
