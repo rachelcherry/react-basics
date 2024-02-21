@@ -15,9 +15,7 @@ const Input = ({ userInput, setUserInput}) => {
                    
                 }}
             />
-            <div className='statement'>
-                <p>Please enter a valid 10-digit phone number</p>
-            </div>
+  
         </>
 
     )

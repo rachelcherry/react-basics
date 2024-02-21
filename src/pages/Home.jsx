@@ -33,7 +33,9 @@ export function Home() {
       <div>
         <Input userInput={userInput} setUserInput={setUserInput} />
         <button onClick={handleAddNumber}>Add </button>
+    
         <div>
+        <br></br>
           <h2>Users who have signed up!</h2>
           <ul>
             {numbersList.map((v, i) => (
@@ -43,7 +45,8 @@ export function Home() {
           </ul>
 
         </div>
-        <WhatsApp setNumbersList={setNumbersList}/>
+        <WhatsApp setNumbersList={setNumbersList} numbersList={numbersList}/>
+        <br></br>
         <Footer />
       </div>
     </div>

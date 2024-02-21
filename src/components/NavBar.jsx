@@ -6,8 +6,10 @@ const NavBar = () => {
       <div>
         <nav>
           <span className="navSpan">Spark! BookPals</span>
+          <div className="links">
           <Link to="/">Home</Link>
-          <Link to="/about">About</Link>          
+          <Link to="/about">About</Link> 
+          </div>         
         </nav>
       </div>
     )

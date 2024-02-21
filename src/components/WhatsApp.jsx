@@ -1,11 +1,12 @@
 import React from 'react';
 
-const WhatsApp = ({setNumbersList}) => {
+const WhatsApp = ({setNumbersList, numbersList}) => {
   function handleWAClick() {
     const number = prompt('Please enter a phone number to be used for notification by whatsapp:');
     if (number) {
       if (number.length === 10 && /^\d+$/.test(number)) {
-        setNumbersList((prevState, props) => {[...prevState, number]})
+         // James says it's okay to do this rather than the (prevValue, props) construction
+        setNumbersList([...numbersList, number])
         alert('Thank you! We will notify you at ' + number + ' when Spark! BookPals is ready for WhatsApp')
       }
       else {
@@ -21,8 +22,6 @@ const WhatsApp = ({setNumbersList}) => {
     <>
       <div className="cta">
         <h1>Want to try it out?</h1>
-      </div>
-      <div>
         <button onClick={handleWAClick}>
           <img
             src={'whatsapp.svg'}

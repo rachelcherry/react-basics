@@ -12,12 +12,11 @@ export function About() {
     <p>Spark! BookPals was conceived with a simple idea in mind - to make it easy for Boston University community members to find new books to read. We recognized the potential of connecting those who have read a lot with those are just dipping their feet into reading.</p>
     <div>
       <h1>{"About the Author"}</h1>
-      <ul className="author-info">
       <img
         className="author-img"
         src={'me.png'} 
       />
-     
+      <ul className="author-info">
       <li>Bio: My name is Rachel Cherry, and I am a Junior at Boston University studying Computer Science. </li>
       <li>Education: Boston University, BA in Computer Science, intended 2025</li>
       <li>Profession: Student and TA</li>
