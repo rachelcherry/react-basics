@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const WhatsApp = ({setNumbersList, numbersList}) => {
   function handleWAClick() {
@@ -28,4 +29,8 @@ const WhatsApp = ({setNumbersList, numbersList}) => {
     </>
   )
 }
+WhatsApp.propTypes = {
+  numbersList: PropTypes.array.isRequired,
+  setNumbersList: PropTypes.func.isRequired,
+};
 export default WhatsApp;

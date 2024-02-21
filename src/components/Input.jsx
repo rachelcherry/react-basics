@@ -1,7 +1,6 @@
-import { Link } from 'react-router-dom';
 import React from 'react';
-import { useState } from 'react';
 import PropTypes from 'prop-types';
+
 
 const Input = ({ userInput, setUserInput}) => {
     return (
@@ -22,4 +21,8 @@ const Input = ({ userInput, setUserInput}) => {
 
     )
 }
+Input.propTypes = {
+    userInput: PropTypes.string.isRequired,
+    setUserInput: PropTypes.func.isRequired,
+  };
 export default Input;
